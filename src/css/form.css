@@ -1,0 +1,92 @@
+/* Контейнер форми */
+.container {
+  max-width: 420px;
+  margin: 24px auto;
+  padding: 16px;
+  background: #f6f6ff; /* світла картка */
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 16px; /* відступи між блоками */
+  color: #2e2f42;
+}
+
+/* Форма вертикально */
+.feedback-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  font-size: 14px;
+  letter-spacing: 0.02em;
+}
+
+/* Кожен label: підпис над полем */
+.feedback-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Поля вводу: ширина 360, висота 40; textarea — 8 рядків */
+.feedback-form input[type='email'],
+.feedback-form textarea {
+  width: 360px;
+  box-sizing: border-box; /* щоб padding не роздував ширину */
+  height: 40px;
+  padding: 0 14px;
+  background: #fff;
+  border: 1px solid #bdbdbd;
+  border-radius: 8px;
+  font-size: 16px;
+  color: #2e2f42;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Висота для textarea за рахунок rows, але підкоригуємо падинги */
+.feedback-form textarea {
+  height: auto; /* дозволь висоті братися з rows */
+  padding: 10px 14px; /* вертикальний внутр. відступ */
+  resize: vertical; /* за бажанням: дозволити зміну висоти */
+}
+
+/* Фокус стан */
+.feedback-form input:focus,
+.feedback-form textarea:focus {
+  border-color: #4e75ff;
+  box-shadow: 0 0 0 3px rgba(78, 117, 255, 0.15);
+}
+
+/* Кнопка */
+.feedback-form button[type='submit'] {
+  align-self: flex-start; /* щоб не тягнулась на всю ширину */
+  height: 40px;
+  padding: 0 18px;
+  border: none;
+  border-radius: 8px;
+  background: #4e75ff;
+  color: #fff;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.05s ease;
+}
+
+.feedback-form button[type='submit']:hover {
+  background: #3d5ef8;
+}
+
+.feedback-form button[type='submit']:active {
+  transform: translateY(1px);
+}
+
+/* опціонально: стиль для посилання "назад" */
+.back-link {
+  color: #4e75ff;
+  text-decoration: none;
+  font-size: 14px;
+}
+.back-link:hover {
+  text-decoration: underline;
+}
